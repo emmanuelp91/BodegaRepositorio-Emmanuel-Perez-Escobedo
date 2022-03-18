@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Krub:ital,wght@0,700;1,400&family=Quintessential&family=Redressed&family=Roboto:wght@300&display=swap');
+
+*{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding:0;
+}
+body{
+	background-color:rgb(248, 248, 235); 
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+p{
+    color:#817E7E;
+	line-height: 2rem;
+	font-size: 1.2rem;
+	text-align:justify;
+	margin-top: 10px;
+}
+h2{
+	font-size: 2rem;
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+}
+h3{
+    color: rgb(3, 3, 3);
+	font-family: 'Dancing Script', cursive;
+	font-size: 1.5rem;
+}
+@keyframes textAlpha{
+	from{opacity: 0;}
+	to{opacity: 1;}	
+}
+
+header {
+	animation-name: textAlpha;
+	animation-duration: 10s;	
+}
+
+.contenedor {
+	display: grid;
+	grid-template-columns:100%;
+	grid-template-rows: auto;
+	grid-template-areas: "header" "nav" "imagen"  "section" "footer";
+}
+/*le damos nombres a las areas del layout*/
+#header{
+	grid-area: header;
+}
+#mainNav{
+	grid-area: nav;
+}
+
+#imagen{
+	grid-area: imagen;
+	
+} 
+
+#main{
+	grid-area: section;
+}
+#article{
+	grid-area: article;
+}
+#footer{
+	grid-area: footer;
+}
+.contenedorrest{
+	display: grid;
+	grid-template-columns:100%;
+	grid-template-rows: auto;
+	grid-template-areas: "header" "nav" "imagen"  "section" "footer";
+}
+
+/*Inicia Encabezado*/
+.encabezadoDiv{
+    display: flex;
+	flex-direction:column;
+	align-items: center;
+}
+.encabezadoDiv img{
+	width: 60%;
+
+}
+  .encabezadoDiv h1{
+	  font-size: 2rem;
+	  font-family: 'Dancing Script', cursive;
+	  font-weight: 580; 
+	  text-align: center;
+	  margin-bottom: 10px;
+  }
+/*Inicia Navegador*/
+nav{
+	position: sticky;
+	top: 0;
+}
+.botoneraDiv{
+	background-color: rgba(153, 11, 11, 0.897);
+	padding: 20px;
+	
+}
+ 
+  .botoneraDiv li{
+	  list-style: none;
+  }
+  .botoneraDiv li a{
+	  font-size: 1.2rem;
+	  text-decoration: none;
+	  color: rgb(248, 248, 235);
+	  font-weight: 400;	  
+	  	background-image: linear-gradient(currentColor, currentColor);
+   		background-position: 0% 100%;
+    	background-repeat: no-repeat;
+    	background-size: 0% 2px;
+    	transition: background-size .3s;	  
+  }
+  .botoneraDiv li a:hover {
+	  color: rgb(236, 232, 232);
+	  font-weight: 600;
+	  /*Subrayado animado*/
+	  background-size: 100% 2px;
+}
+
+  /*Inicia Main*/
+.seccionMain{
+	margin-top: 10px;
+} 
+    .seccionMain h2{
+		font-family: 'Dancing Script', cursive;
+		font-size: 1.5rem;
+	}
+	.seccionMain p{
+        font-size: 1rem;
+	    font-family: 'Roboto', sans-serif;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+/*Inicia imagen indexhtml*/
+@keyframes imgAnimation{
+	0%{background-image: url(../img/frentebodega.jpeg)}
+	50%{background-image: url(../img/bodegaimg_ccexpress.jpeg)}
+	100%{background-image: url(../img/nieve.jpg)}
+}
+section {
+	height: 20vh;
+	animation-name: imgAnimation;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+	animation-direction: linear;
+	background-size: cover;
+}
+
+ /*Inicia Main Restaurant*/
+.seccionMainrest{
+	margin-top: 10px;
+} 
+    .seccionMainrest h2{
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.rem;
+	}
+	.seccionMainrest p{
+        font-size: 1rem;
+	    font-family: 'Roboto', sans-serif;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+/*Inicia Imagen restaurante.html*/
+.imagenDivrest{
+	width: 95%;
+	display: flex;
+	align-items:center;
+	margin: 10px;
+}
+/*Inicia article restaurante.html*/
+.seccionArticle{
+	margin: 10px;
+	/*margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;*/
+}
+  .seccionArticle h2{
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.2rem;
+	}
+	.seccionArticle p{
+		font-size: 1rem;
+	}
+ /*Inicia Main Visitas
+.seccionMainvisit{
+	margin-top: 10px;
+} 
+    .seccionMainvisit h2{
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.rem;
+	}
+	.seccionMainvisit p{
+        font-size: 1rem;
+	    font-family: 'Roboto', sans-serif;
+		margin-left: 10px;
+		margin-right: 10px;
+	} */
+	
+/*Inicia footer*/
+.textFooter{
+    text-align: center;
+    background-color: #ece7e7;
+	
+}
+
+    .textFooter h3{
+	    margin: 10px 20px;
+		margin-bottom: 16px;
+
+	}
+	.textFooter img{
+		width: 6%;	
+		
+	}
+.footerImg{
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* media queries*/
+
+@media (min-width: 1200px){
+	.contenedor{
+		grid-template-columns: 100vw;
+		grid-template-rows: repeat(6, auto);
+		grid-template-areas: "header" "nav" "imagen"  "section" "footer";	
+	}
+
+#header .encabezadoDiv{
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+}
+#header .encabezadoDiv img{
+	width:25%;
+	margin-left: -20px;
+
+}
+#header .encabezadoDiv h1{
+	font-size: 2.8rem;
+	font-weight: 590;
+	margin-left: -30px;
+	margin-top: 20px;
+}
+
+#mainNav .botoneraDiv{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+#imagen .imagenDiv{
+	width: 100%;
+	margin: 5px;	
+}
+#main .seccionMain{
+	margin: 10px;
+	
+}
+#main .seccionMain h2{
+	font-size: 1.8rem;
+	margin-top: 20px;
+}
+
+#footer .textFooter{
+	
+}
+#footer .textFooter img{
+	width: 2%;
+}
+
+
+
+@keyframes imgAnimation{
+	0%{background-image: url(../img/frentebodega.jpeg)}
+	50%{background-image: url(../img/bodegaimg_ccexpress.jpeg)}
+	100%{background-image: url(../img/nieve.jpg)}
+}
+section {
+	height: 80vh;
+	animation-name: imgAnimation;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+	animation-direction: linear;
+	background-size: cover;
+}
+
+@media (min-width: 1200px){
+	.contenedorest{
+		grid-template-columns: 50vw 50vw;
+		grid-template-rows: repeat(6, auto);
+		grid-template-areas: "header header" "nav nav" "section section" "article imagen" "footer footer";	
+    }
+
